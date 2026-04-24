@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Hammad · WordPress & Full‑Stack Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-gradient"></div>
+<div class="overlay"></div>
+
+<div class="container">
+  <header>
+    <!-- LEFT SIDE: random picture + creative text + WordPress badge + Hammad logo -->
+    <div class="left-brand">
+      <img class="profile-pic" src="Hammad.png" alt="Hammad's avatar">
+      <div class="creative-text">
+      </div>
+   
+      <div class="logo-text">Hammad</div>
+    </div>
+
+
+    <!-- Navigation (moved inside header, after right group) -->
+     <div class="menu-toggle" onclick="toggleMenu()">
+  <i class="fas fa-bars"></i>
+</div>
+
+  </header>
+
+  <section class="hero">
+    <h1>Crafting <span class="gradient-text">digital experiences</span><br> with WordPress & Full‑Stack magic</h1>
+    <div class="typewriter" id="typewriter"></div>
+    <div class="skills">
+      <span class="skill-tag"><i class="fab fa-wordpress"></i> WordPress Expert</span>
+      <span class="skill-tag"><i class="fas fa-code"></i> Custom Websites</span>
+      <span class="skill-tag"><i class="fas fa-database"></i> Full‑Stack Developer</span>
+      <span class="skill-tag"><i class="fas fa-palette"></i> Modern UI/UX</span>
+    </div>
+    <p style="max-width: 600px; margin-top: 1rem; color: #b9c7e6;">I blend creative design with robust backend logic — delivering high‑performance, responsive websites that stand out.</p>
+  </section>
+
+<!-- Gpa Calculator -->
+  <div id="projects">
+    <h2 class="section-title fade-up">✨ Featured projects</h2>
+    <div class="projects-grid">
+      <div class="project-card fade-up">
+        <div class="project-icon"><i class="fas fa-calculator"></i></div>
+        <h3>GPA Calculator</h3>
+        <p class="project-desc">Smart tool to calculate semester & cumulative GPA — fully interactive. (Coming soon)</p>
+        <div class="tech-stack"><span>JavaScript</span><span>React (planned)</span></div>
+      <a id="cal" href="Gpa calculator/index.html">View Calculator</a>
+      </div>
+
+      <!-- Restuant Project -->
+      <div class="project-card fade-up">
+        <div class="project-icon"><i class="fas fa-utensils"></i></div>
+        <h3>Full‑Stack Restaurant</h3>
+        <p class="project-desc">Complete ordering system with live cart, menu CRUD, order history — data persists locally.</p>
+        <div class="tech-stack"><span>HTML/CSS/JS</span><span>LocalStorage API</span></div>
+      <a id="cal" href="restuant/restuant.html" id="restuant">View Restuant Websites</a>
+      </div>
+
+      <div class="project-card fade-up">
+        <div class="project-icon"><i class="fas fa-university"></i></div>
+        <h3>Full‑Stack College Hub</h3>
+        <p class="project-desc">Student & course management: add/delete students, manage courses, enrollments — persistent storage.</p>
+        <div class="tech-stack"><span>JS Data Layer</span><span>localStorage</span></div>
+       <a id="cal" href="Cosmatic Website/index.html">View website</a>
+
+      </div>
+    </div>
+  </div>
+
+  <section id="contact" class="contact-section fade-up">
+    <h2 style="font-size: 1.9rem; margin-bottom: 1.2rem;">Let's connect</h2>
+    <div class="contact-info">
+      <div class="contact-details">
+        <p><i class="fas fa-phone-alt" style="color:#ffc371"></i> +92 3315048654</p>
+        <p><i class="fas fa-envelope" style="color:#ffc371"></i> hammaddev407gmail.com</p>
+      </div>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/hammad-shakeel-3b217b328/" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </section>
+  <footer>© 2025 Hammad — WordPress & Full‑Stack Developer. All systems go.</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
