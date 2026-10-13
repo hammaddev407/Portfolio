@@ -1,46 +1,73 @@
-  const words = ["WordPress Developer", "Full‑Stack Developer", "Custom Website Creator"];
-  let i = 0;
-  let j = 0;
-  let currentWord = "";
-  let isDeleting = false;
-  const typewriterElement = document.getElementById("typewriter");
-function toggleMenu() {
-  document.getElementById("navLinks").classList.toggle("active");
+const words = ["WordPress Developer", "Full-Stack Developer", "Custom Website Creator"];
+const typewriterElement = document.getElementById("typewriter");
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+function setMenuOpen(isOpen) {
+  if (!menuToggle || !navLinks) return;
+  navLinks.classList.toggle("active", isOpen);
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.querySelector(".sr-only").textContent = isOpen
+    ? "Close navigation"
+    : "Open navigation";
 }
-  function typeEffect() {
-    currentWord = words[i];
-    if (isDeleting) {
-      typewriterElement.textContent = currentWord.substring(0, j-1);
-      j--;
-      if (j === 0) {
-        isDeleting = false;
-        i = (i + 1) % words.length;
-      }
-    } else {
-      typewriterElement.textContent = currentWord.substring(0, j+1);
-      j++;
-      if (j === currentWord.length) {
+
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener("click", () => {
+    setMenuOpen(!navLinks.classList.contains("active"));
+  });
+
+  navLinks.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setMenuOpen(false));
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setMenuOpen(false);
+  });
+}
+
+if (typewriterElement) {
+  if (prefersReducedMotion) {
+    typewriterElement.textContent = words[0];
+  } else {
+    let wordIndex = 0;
+    let characterIndex = 0;
+    let isDeleting = false;
+
+    function typeEffect() {
+      const currentWord = words[wordIndex];
+      characterIndex += isDeleting ? -1 : 1;
+      typewriterElement.textContent = currentWord.substring(0, characterIndex);
+
+      if (!isDeleting && characterIndex === currentWord.length) {
         isDeleting = true;
         setTimeout(typeEffect, 1500);
         return;
       }
+      if (isDeleting && characterIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+      }
+      setTimeout(typeEffect, isDeleting ? 55 : 100);
     }
-    setTimeout(typeEffect, 100);
-  }
-  typeEffect();
 
-  // Intersection Observer for fade-up
-  const faders = document.querySelectorAll('.fade-up');
-  const appearOptions = {
-    threshold: 0.2,
-    rootMargin: "0px 0px -50px 0px"
-  };
-  const appearOnScroll = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+    typeEffect();
+  }
+}
+
+const faders = document.querySelectorAll(".fade-up");
+if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+  faders.forEach((fader) => fader.classList.add("visible"));
+} else {
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        appearOnScroll.unobserve(entry.target);
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
       }
     });
-  }, appearOptions);
-  faders.forEach(fader => appearOnScroll.observe(fader));
+  }, { threshold: 0.2, rootMargin: "0px 0px -50px 0px" });
+
+  faders.forEach((fader) => appearOnScroll.observe(fader));
+}
