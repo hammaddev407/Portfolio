@@ -1,0 +1,5 @@
+.about__layout { display: grid; align-items: start; gap: clamp(2rem, 6vw, 6rem); grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); }
+.about__copy { color: var(--color-muted); }
+.about__copy p:first-child { color: var(--color-text); font-size: 1.25rem; font-weight: 500; }
+.about__copy .button { margin-top: 1rem; }
+@media (max-width: 991px) { .about__layout { grid-template-columns: 1fr; } }

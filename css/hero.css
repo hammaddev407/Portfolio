@@ -1,0 +1,18 @@
+.hero { position: relative; display: grid; min-height: 100svh; align-items: center; overflow: hidden; padding-top: 7rem; }
+.hero__particles { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .4; }
+.hero__content { position: relative; z-index: 1; display: grid; align-items: center; gap: 3rem; grid-template-columns: minmax(0, 1fr) 260px; }
+.hero__copy { max-width: 760px; }
+.hero h1 { max-width: 800px; margin-bottom: 1.5rem; }
+.hero__typed { min-height: 2rem; color: #d2d2d2; font-size: clamp(1.05rem, 2vw, 1.35rem); font-weight: 500; }
+.hero__cursor { color: var(--color-accent); animation: blink 1s infinite; }
+.hero__intro { max-width: 620px; color: #a7a7a7; font-size: 1.1rem; }
+.hero__actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-block: 2rem; }
+.hero__portrait { text-align: center; }
+.hero__portrait-frame { width: 200px; margin: 0 auto 1.25rem; padding: 7px; border: 1px solid rgb(0 123 255 / 60%); border-radius: 50%; background: linear-gradient(145deg, var(--color-primary), var(--color-accent)); box-shadow: 0 0 45px rgb(0 123 255 / 25%); }
+.hero__portrait-frame img { aspect-ratio: 1; border: 5px solid var(--color-dark); border-radius: 50%; object-fit: cover; }
+.hero__availability { color: #a7a7a7; font-size: .85rem; }
+.hero__availability .status-dot { margin-right: .5rem; }
+.trust-strip { display: flex; flex-wrap: wrap; gap: 1rem; color: #8e8e8e; font-size: .75rem; }
+.trust-strip i { margin-right: .3rem; color: var(--color-accent); }
+@keyframes blink { 50% { opacity: 0; } }
+@media (max-width: 767px) { .hero__content { grid-template-columns: 1fr; } .hero__portrait { order: -1; } .hero__portrait-frame { width: 160px; } }

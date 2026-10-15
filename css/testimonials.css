@@ -1,0 +1,18 @@
+.testimonial-carousel { position: relative; max-width: 760px; margin: auto; padding-inline: 3.5rem; text-align: center; }
+.testimonial-carousel__viewport { overflow: hidden; }
+.testimonial-carousel__track { position: relative; min-height: 310px; }
+.testimonial-slide { padding: 1rem; }
+.testimonial-slide[hidden] { display: none; }
+.testimonial-slide__avatar { display: grid; width: 64px; height: 64px; margin: 0 auto 1rem; place-items: center; border-radius: 50%; background: var(--color-primary); color: #fff; font-weight: 700; }
+.testimonial-slide__stars { margin-bottom: 1.25rem; color: var(--color-accent); letter-spacing: .15em; }
+.testimonial-slide blockquote { margin: 0 auto 1.5rem; color: #f0f0f0; font-family: "Poppins", sans-serif; font-size: clamp(1.2rem, 3vw, 1.65rem); line-height: 1.45; }
+.testimonial-slide p { color: #aaa; }
+.testimonial-slide p strong, .testimonial-slide p span { display: block; }
+.testimonial-slide p strong { color: #fff; }
+.carousel-control { position: absolute; top: 50%; width: 42px; height: 42px; transform: translateY(-50%); border: 1px solid rgb(255 255 255 / 22%); border-radius: 50%; background: transparent; color: #fff; }
+.carousel-control:hover { border-color: var(--color-accent); color: var(--color-accent); }
+.carousel-control--prev { left: 0; }
+.carousel-control--next { right: 0; }
+.carousel-dots { display: flex; justify-content: center; gap: .5rem; margin-top: 1rem; }
+.carousel-dot { width: 8px; height: 8px; border: 0; border-radius: 50%; background: #666; padding: 0; }
+.carousel-dot.is-active { width: 24px; border-radius: 999px; background: var(--color-accent); }

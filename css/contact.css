@@ -1,0 +1,20 @@
+.contact__layout { display: grid; gap: clamp(2rem, 8vw, 8rem); grid-template-columns: minmax(0, 1.2fr) minmax(240px, .8fr); }
+.contact__form-wrap > p:not(.eyebrow) { max-width: 560px; color: var(--color-muted); }
+.contact-form { display: grid; gap: 1rem; margin-top: 2rem; }
+.form-row { display: grid; gap: 1rem; grid-template-columns: 1fr 1fr; }
+.form-field { display: grid; gap: .4rem; }
+.form-field label { font-size: .85rem; font-weight: 700; }
+.form-field input, .form-field select, .form-field textarea { width: 100%; border: 1px solid var(--color-border); border-radius: var(--radius-sm); background: var(--color-bg); color: var(--color-text); padding: .75rem .85rem; }
+.form-field textarea { resize: vertical; }
+.form-field.is-invalid input, .form-field.is-invalid select, .form-field.is-invalid textarea { border-color: #d92d20; }
+.form-field__error { min-height: 1.2em; color: #d92d20; font-size: .75rem; }
+.contact__details { align-self: center; }
+.contact__details > a, .contact__details > p { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; color: var(--color-muted); }
+.contact__details > a:hover { color: var(--color-primary); }
+.contact__details i { width: 20px; color: var(--color-primary); text-align: center; }
+.contact__socials { display: flex; gap: .7rem; margin-top: 2rem; }
+.contact__socials a, .site-footer__socials a { display: grid; width: 42px; height: 42px; place-items: center; border-radius: 50%; background: var(--color-text); color: #fff; transition: background .2s ease, transform .2s ease; }
+.contact__socials a:hover, .site-footer__socials a:hover { transform: translateY(-3px); background: var(--color-primary); }
+.contact__socials a[aria-label="WhatsApp"]:hover { background: #25d366; }
+.contact__socials a[aria-label="LinkedIn"]:hover { background: #0a66c2; }
+@media (max-width: 767px) { .contact__layout, .form-row { grid-template-columns: 1fr; } }
