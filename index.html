@@ -1,174 +1,256 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Hammad Shakeel builds conversion-focused websites, mobile products, backend APIs, and practical automation systems.">
-  <meta name="theme-color" content="#0b1020">
-  <link rel="canonical" href="https://hammaddev407.github.io/Portfolio/">
-  <meta property="og:title" content="Hammad Shakeel — Full-Stack Developer">
-  <meta property="og:description" content="Selected web products and practical full-stack work by Hammad Shakeel.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://hammaddev407.github.io/Portfolio/">
-  <title>Hammad Shakeel — Full-Stack Developer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="bg-gradient" aria-hidden="true"></div>
-  <div class="noise" aria-hidden="true"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Hammad Shakeel is a full-stack developer and product designer building Flutter, React, NestJS, Prisma, PostgreSQL, and AI-powered products."
+    />
+    <meta name="theme-color" content="#0A0A0A" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Hammad Shakeel | Full-Stack Developer & Product Designer" />
+    <meta
+      property="og:description"
+      content="Selected web, UI, tracking, and app projects from Hammad Shakeel."
+    />
+    <meta property="og:image" content="img/og-image.jpg" />
+    <meta property="og:url" content="https://example.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hammad Shakeel | Full-Stack Developer & Product Designer" />
+    <meta
+      name="twitter:description"
+      content="Selected web, UI, tracking, and app projects from Hammad Shakeel."
+    />
+    <meta name="twitter:image" content="img/og-image.jpg" />
+    <title>Hammad Shakeel | Full-Stack Developer & Product Designer</title>
+    <link rel="canonical" href="https://example.com" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/skills.css" />
+    <link rel="stylesheet" href="css/projects.css" />
+    <link rel="stylesheet" href="css/services.css" />
+    <link rel="stylesheet" href="css/testimonials.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/dark-theme.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Hammad Shakeel",
+        "jobTitle": "Full-Stack Developer and Product Designer",
+        "sameAs": ["https://github.com/hammaddev407", "https://www.linkedin.com/in/hammad-shakeel-3b217b328/"]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <div class="container">
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="Hammad Shakeel home">
-        <img class="profile-pic" src="Hammad.jpg" alt="Portrait of Hammad Shakeel" width="42" height="42" decoding="async">
-        <span class="brand-name">Hammad<span>.</span></span>
-      </a>
-
-      <button class="menu-toggle" id="menuToggle" type="button" aria-controls="navLinks" aria-expanded="false">
-        <i class="fas fa-bars" aria-hidden="true"></i>
-        <span class="sr-only">Open navigation</span>
-      </button>
-
-      <nav class="site-nav" aria-label="Primary navigation">
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#services">Services</a></li>
-          <li><a href="#work">Selected work</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a class="nav-github" href="https://github.com/hammaddev407" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></li>
-        </ul>
+    <header class="site-header" data-header>
+      <nav class="site-nav container" aria-label="Primary navigation">
+        <a class="site-nav__logo" href="#hero" aria-label="Back to top">Hammad Shakeel</a>
+        <button
+          class="site-nav__toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="primary-menu"
+          data-menu-toggle
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <div class="site-nav__drawer" id="primary-menu" data-menu>
+          <ul class="site-nav__links">
+            <li><a class="site-nav__link" href="#about">About</a></li>
+            <li><a class="site-nav__link" href="#projects">Projects</a></li>
+            <li><a class="site-nav__link" href="#services">Services</a></li>
+            <li><a class="site-nav__link" href="#testimonials">Testimonials</a></li>
+            <li><a class="site-nav__link" href="#contact">Contact</a></li>
+          </ul>
+          <button class="theme-toggle" type="button" aria-label="Switch color theme" data-theme-toggle>
+            <i class="fa-solid fa-moon" aria-hidden="true"></i>
+          </button>
+        </div>
       </nav>
     </header>
 
-    <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Available for focused freelance work</p>
-          <h1 id="hero-title">Digital products that feel <span class="gradient-text">clear, capable, and considered.</span></h1>
-          <p class="hero-summary">I help teams turn rough ideas into responsive websites, mobile experiences, backend APIs, and automation workflows that are practical to ship and easy to use.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#contact">Start a project <span aria-hidden="true">↗</span></a>
-            <a class="button button-quiet" href="#work">See selected work <span aria-hidden="true">↓</span></a>
+    <main id="main-content">
+      <section class="hero section section--dark" id="hero" aria-labelledby="hero-title">
+        <canvas class="hero__particles" aria-hidden="true" data-particles></canvas>
+        <div class="hero__content container">
+          <div class="hero__copy">
+            <p class="eyebrow">Currently accepting 2 new clients</p>
+            <h1 id="hero-title">I turn ambitious ideas into <span class="text-accent">digital products people choose.</span></h1>
+            <p class="hero__typed" aria-live="polite"><span data-typed-text></span><span class="hero__cursor" aria-hidden="true">|</span></p>
+            <p class="hero__intro">
+              I’m Hammad Shakeel — a full-stack app developer and web developer who combines Flutter, React, NestJS, and sharp UI/UX to turn complex ideas into fast, credible products that win attention and drive action.
+            </p>
+            <div class="hero__actions">
+              <a class="button button--primary" href="#projects">View My Work <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              <a class="button button--outline" href="#contact">Book a Free Call</a>
+            </div>
+            <div class="trust-strip" aria-label="Trust signals">
+              <span><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> SSL secured</span>
+              <span><i class="fa-solid fa-heart" aria-hidden="true"></i> 100% satisfaction guarantee</span>
+              <span><i class="fa-solid fa-clock" aria-hidden="true"></i> Replies within 24 hours</span>
+            </div>
+          </div>
+          <div class="hero__portrait">
+            <div class="hero__portrait-frame">
+              <img src="https://raw.githubusercontent.com/hammaddev407/Portfolio/5354b46ca03b2f8e346afe00b2fc05d5002c58d2/Hammad.jpg" width="200" height="200" alt="Hammad Shakeel, full-stack app and web developer" />
+            </div>
+            <p class="hero__availability"><span class="status-dot"></span> Available for select projects</p>
           </div>
         </div>
-        <aside class="hero-note" aria-label="Working approach">
-          <span class="note-label">01 / Approach</span>
-          <p>Understand the problem.<br>Build the smallest useful thing.<br>Make it trustworthy.</p>
-          <span class="note-line" aria-hidden="true"></span>
-          <span class="note-caption">Web · Mobile · Backend · Automation</span>
-        </aside>
       </section>
 
-      <section class="signal-row" aria-label="Core capabilities">
-        <span>Full-stack web</span>
-        <span>Flutter mobile</span>
-        <span>REST APIs</span>
-        <span>Product-minded UX</span>
-      </section>
-
-      <section id="services" class="content-section" aria-labelledby="services-title">
-        <div class="section-heading">
-          <p class="eyebrow">What I can help with</p>
-          <h2 id="services-title">Useful software, not just polished screens.</h2>
-        </div>
-        <div class="services-grid">
-          <article class="service-card">
-            <span class="service-number">01</span>
-            <i class="fas fa-layer-group service-icon" aria-hidden="true"></i>
-            <h3>Web experiences</h3>
-            <p>Responsive marketing sites, storefronts, and dashboards with clear information architecture and accessible interactions.</p>
-          </article>
-          <article class="service-card">
-            <span class="service-number">02</span>
-            <i class="fas fa-mobile-screen-button service-icon" aria-hidden="true"></i>
-            <h3>Mobile products</h3>
-            <p>Flutter interfaces connected to real application state, APIs, validation, and device-friendly flows.</p>
-          </article>
-          <article class="service-card">
-            <span class="service-number">03</span>
-            <i class="fas fa-server service-icon" aria-hidden="true"></i>
-            <h3>Backend systems</h3>
-            <p>Structured NestJS APIs, authentication, database-backed workflows, and server-side rules that protect product logic.</p>
-          </article>
-          <article class="service-card">
-            <span class="service-number">04</span>
-            <i class="fas fa-wand-magic-sparkles service-icon" aria-hidden="true"></i>
-            <h3>Automation</h3>
-            <p>Practical integrations and repeatable workflows that remove manual steps without hiding failure states.</p>
-          </article>
+      <section class="about section" id="about" aria-labelledby="about-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">A little about me</p>
+            <h2 id="about-title">Good design gets attention.<br /><span class="text-primary">Great products earn trust.</span></h2>
+          </div>
+          <div class="about__layout">
+            <div class="about__copy">
+              <p>I’m a multi-disciplinary developer and designer building polished products across Flutter, NestJS, React, and modern UI/UX.</p>
+              <p>From Figma concepts to production systems, I connect thoughtful interfaces with reliable APIs, Prisma, PostgreSQL, and AI-enabled product experiences.</p>
+              <p>My current focus is building useful platforms such as Hammad Bites with a product mindset, strong visual detail, and maintainable engineering.</p>
+              <a class="button button--github" href="https://github.com/hammaddev407/" aria-label="Open Hammad Shakeel GitHub profile">View GitHub Profile <i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            </div>
+            <div class="skills-grid" aria-label="Core skills">
+              <div class="skill-card"><i class="fa-brands fa-html5" aria-hidden="true"></i><span>HTML5</span></div>
+              <div class="skill-card"><i class="fa-brands fa-css3-alt" aria-hidden="true"></i><span>CSS3</span></div>
+              <div class="skill-card"><i class="fa-brands fa-js" aria-hidden="true"></i><span>JavaScript</span></div>
+              <div class="skill-card"><i class="fa-brands fa-flutter" aria-hidden="true"></i><span>Flutter</span></div>
+              <div class="skill-card"><i class="fa-brands fa-node-js" aria-hidden="true"></i><span>NestJS</span></div>
+              <div class="skill-card"><i class="fa-brands fa-figma" aria-hidden="true"></i><span>Figma</span></div>
+              <div class="skill-card"><i class="fa-solid fa-database" aria-hidden="true"></i><span>Prisma / PostgreSQL</span></div>
+              <div class="skill-card"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i><span>AI Platforms</span></div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="work" class="content-section" aria-labelledby="work-title">
-        <div class="section-heading section-heading-work">
-          <div>
+      <section class="projects section section--muted" id="projects" aria-labelledby="projects-title">
+        <div class="container">
+          <div class="section-heading section-heading--center">
             <p class="eyebrow">Selected work</p>
-            <h2 id="work-title">Small products with real interaction behind them.</h2>
+            <h2 id="projects-title">Real builds. <span class="text-primary">Clear outcomes.</span></h2>
+            <p>Four focused builds showing how I turn product thinking, visual design, and engineering into experiences clients can trust.</p>
           </div>
-          <p class="section-aside">A concise set of public work. Statuses reflect what is currently verifiable.</p>
-        </div>
-        <div class="projects-grid">
-          <article class="project-card project-card-featured">
-            <div class="project-topline"><span class="status status-live">Live demo</span><span class="project-index">01</span></div>
-            <div class="project-icon" aria-hidden="true"><i class="fas fa-utensils"></i></div>
-            <h3>Pakistani Restaurant Website</h3>
-            <p class="project-desc">A focused restaurant experience with category filtering, generated dish cards, a cart sidebar, item count, subtotal, and a cash-on-delivery checkout call to action.</p>
-            <div class="tech-stack"><span>HTML/CSS/JS</span><span>DOM interactions</span><span>Local state</span></div>
-            <a class="project-link" href="https://hammaddev407.github.io/Restuant-website/" target="_blank" rel="noopener noreferrer">View live restaurant site <span aria-hidden="true">↗</span></a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-topline"><span class="status status-live">Live demo</span><span class="project-index">02</span></div>
-            <div class="project-icon" aria-hidden="true"><i class="fas fa-spa"></i></div>
-            <h3>Glow Haven Cosmetics</h3>
-            <p class="project-desc">A dark cosmetics storefront with rendered product data, bag/cart interactions, totals, and a clear checkout call to action.</p>
-            <div class="tech-stack"><span>JavaScript</span><span>Responsive CSS</span></div>
-            <a class="project-link" href="https://hammaddev407.github.io/Cosmatic-Website/" target="_blank" rel="noopener noreferrer">View live cosmetics site <span aria-hidden="true">↗</span></a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-topline"><span class="status status-live">Live demo</span><span class="project-index">03</span></div>
-            <div class="project-icon" aria-hidden="true"><i class="fas fa-calculator"></i></div>
-            <h3>GPA Calculator</h3>
-            <p class="project-desc">A browser-based GPA and CGPA calculator with dynamic course rows and selectable 80, 85, and 90 grading thresholds.</p>
-            <div class="tech-stack"><span>JavaScript</span><span>HTML/CSS</span></div>
-            <a class="project-link" href="https://hammaddev407.github.io/Gpacalculator1/" target="_blank" rel="noopener noreferrer">Open live calculator <span aria-hidden="true">↗</span></a>
-          </article>
+          <div class="project-filters" role="group" aria-label="Filter projects" data-project-filters>
+            <button class="filter-button is-active" type="button" aria-pressed="true" data-filter="all">All</button>
+            <button class="filter-button" type="button" aria-pressed="false" data-filter="web-apps">Web Apps</button>
+            <button class="filter-button" type="button" aria-pressed="false" data-filter="ui-ux">UI/UX</button>
+            <button class="filter-button" type="button" aria-pressed="false" data-filter="open-source">Open Source</button>
+            <button class="filter-button" type="button" aria-pressed="false" data-filter="client-work">Client Work</button>
+          </div>
+          <div class="projects-grid">
+            <article class="project-card" data-category="web-apps open-source" data-project="1">
+              <button class="project-card__trigger" type="button" aria-label="View case study: Hammad Bites">
+                <div class="project-card__image"><img loading="lazy" src="img/projects/food-delivery.svg" width="800" height="560" alt="Hammaddev Food-delivery project thumbnail" /></div>
+                <div class="project-card__body"><p class="project-card__category">Product / AI Platform</p><h3>Hammad Bites</h3><div class="tag-list"><span>Flutter</span><span>NestJS</span><span>PostgreSQL</span></div><p class="project-card__result">An AI-ready food platform with a polished ordering experience.</p></div>
+              </button>
+              <div class="project-card__links"><a href="https://hammaddev407.github.io/Food-delivery/" aria-label="View live demo for Hammad Bites">Live Demo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a href="https://github.com/hammaddev407/Food-delivery" aria-label="View source code for Hammad Bites">Source Code <i class="fa-brands fa-github" aria-hidden="true"></i></a></div>
+            </article>
+            <article class="project-card" data-category="ui-ux client-work" data-project="2">
+              <button class="project-card__trigger" type="button" aria-label="View case study: Gym_website">
+                <div class="project-card__image"><img loading="lazy" src="img/projects/gym-website.svg" width="800" height="560" alt="Hammaddev Gym website project thumbnail" /></div>
+                <div class="project-card__body"><p class="project-card__category">UI/UX / Client Work</p><h3>Gym_website</h3><div class="tag-list"><span>HTML</span><span>CSS</span></div><p class="project-card__result">A focused fitness website concept with responsive presentation.</p></div>
+              </button>
+              <div class="project-card__links"><a href="https://hammaddev407.github.io/Gym_website/" aria-label="View live demo for Gym_website">Live Demo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a href="https://github.com/hammaddev407/Gym_website" aria-label="View source code for Gym_website">Source Code <i class="fa-brands fa-github" aria-hidden="true"></i></a></div>
+            </article>
+            <article class="project-card" data-category="ui-ux client-work" data-project="3">
+              <button class="project-card__trigger" type="button" aria-label="View case study: Cosmatic-Website">
+                <div class="project-card__image"><img loading="lazy" src="img/projects/cosmatic-website.svg" width="800" height="560" alt="Hammaddev Cosmatic Website project thumbnail" /></div>
+                <div class="project-card__body"><p class="project-card__category">UI/UX / Client Work</p><h3>Cosmatic-Website</h3><div class="tag-list"><span>HTML</span><span>CSS</span></div><p class="project-card__result">A cosmetics storefront design focused on visual polish.</p></div>
+              </button>
+              <div class="project-card__links"><a href="https://hammaddev407.github.io/Cosmatic-Website/" aria-label="View live demo for Cosmatic-Website">Live Demo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a href="https://github.com/hammaddev407/Cosmatic-Website" aria-label="View source code for Cosmatic-Website">Source Code <i class="fa-brands fa-github" aria-hidden="true"></i></a></div>
+            </article>
+            <article class="project-card" data-category="web-apps client-work" data-project="4">
+              <button class="project-card__trigger" type="button" aria-label="View case study: Pixel-Tracking">
+                <div class="project-card__image"><img loading="lazy" src="img/projects/pixel-tracking.svg" width="800" height="560" alt="Hammaddev Pixel Tracking project thumbnail" /></div>
+                <div class="project-card__body"><p class="project-card__category">Web Apps / Client Work</p><h3>Pixel-Tracking</h3><div class="tag-list"><span>JavaScript</span><span>Analytics</span></div><p class="project-card__result">A focused tracking interface for understanding user activity.</p></div>
+              </button>
+              <div class="project-card__links"><a href="https://hammaddev407.github.io/Pixel-Tracking/" aria-label="View live demo for Pixel-Tracking">Live Demo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a href="https://github.com/hammaddev407/Pixel-Tracking" aria-label="View source code for Pixel-Tracking">Source Code <i class="fa-brands fa-github" aria-hidden="true"></i></a></div>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section class="process-strip" aria-labelledby="process-title">
-        <div>
-          <p class="eyebrow">A sensible process</p>
-          <h2 id="process-title">From first conversation to a shippable next step.</h2>
+      <section class="services section" id="services" aria-labelledby="services-title">
+        <div class="container">
+          <div class="section-heading"><p class="eyebrow">How I can help</p><h2 id="services-title">Focused expertise.<br /><span class="text-primary">Practical outcomes.</span></h2></div>
+          <div class="services-grid">
+            <article class="service-card"><i class="fa-solid fa-pen-ruler" aria-hidden="true"></i><h3>Product UI/UX</h3><p>Turn rough ideas into clear, high-converting interfaces with Figma, responsive systems, and purposeful interaction.</p><a href="#contact">Discuss your product <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></article>
+            <article class="service-card"><i class="fa-solid fa-layer-group" aria-hidden="true"></i><h3>Full-Stack App Development</h3><p>Build reliable product flows with Flutter or React apps and NestJS, Prisma, and PostgreSQL services behind them.</p><a href="#contact">Start a build <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></article>
+            <article class="service-card"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i><h3>AI Product Integration</h3><p>Add useful AI capabilities to real products with thoughtful UX, secure APIs, and a server-authoritative architecture.</p><a href="#contact">Explore an AI idea <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></article>
+          </div>
         </div>
-        <ol class="process-list">
-          <li><span>01</span><strong>Clarify</strong><small>Goals, users, constraints</small></li>
-          <li><span>02</span><strong>Shape</strong><small>Flows, scope, technical plan</small></li>
-          <li><span>03</span><strong>Build</strong><small>Incremental, tested delivery</small></li>
-        </ol>
       </section>
 
-      <section id="contact" class="contact-section" aria-labelledby="contact-title">
-        <div>
-          <p class="eyebrow">Have a useful problem?</p>
-          <h2 id="contact-title">Let’s make the next version easier to use.</h2>
-          <p class="contact-intro">Tell me what you are trying to build, where it is stuck, and what a good outcome looks like. I’ll reply through the channel that works best for you.</p>
+      <section class="testimonials section section--dark" id="testimonials" aria-labelledby="testimonials-title">
+        <div class="container">
+          <div class="section-heading section-heading--center"><p class="eyebrow">Client perspective</p><h2 id="testimonials-title">Good work speaks.<br /><span class="text-accent">Clients speak louder.</span></h2></div>
+          <div class="testimonial-carousel" data-carousel aria-roledescription="carousel">
+            <div class="testimonial-carousel__viewport">
+              <div class="testimonial-carousel__track">
+                <article class="testimonial-slide is-active" data-slide aria-roledescription="slide" aria-label="1 of 3"><div class="testimonial-slide__avatar">HS</div><div class="testimonial-slide__stars" aria-label="GitHub project signal">★★★★★</div><blockquote>“Building polished apps and websites with a focus on clarity, performance, and responsive detail.”</blockquote><p><strong>Hammad Shakeel</strong><span>Full-Stack App & Web Developer</span></p></article>
+                <article class="testimonial-slide" data-slide aria-roledescription="slide" aria-label="2 of 3" hidden><div class="testimonial-slide__avatar">GH</div><div class="testimonial-slide__stars" aria-label="Public project signal">★★★★★</div><blockquote>“Explore the public repositories to see the range of websites, apps, and tools I build.”</blockquote><p><strong>Public work</strong><span>github.com/hammaddev407</span></p></article>
+                <article class="testimonial-slide" data-slide aria-roledescription="slide" aria-label="3 of 3" hidden><div class="testimonial-slide__avatar">UI</div><div class="testimonial-slide__stars" aria-label="Portfolio signal">★★★★★</div><blockquote>“From mobile apps to practical web tools, every project is built to be useful and easy to understand.”</blockquote><p><strong>Selected projects</strong><span>Web, app, and product development</span></p></article>
+              </div>
+            </div>
+            <button class="carousel-control carousel-control--prev" type="button" aria-label="Previous testimonial" data-carousel-prev><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button>
+            <button class="carousel-control carousel-control--next" type="button" aria-label="Next testimonial" data-carousel-next><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+            <div class="carousel-dots" role="tablist" aria-label="Choose testimonial"><button class="carousel-dot is-active" type="button" role="tab" aria-label="Show testimonial 1" aria-selected="true" data-carousel-dot="0"></button><button class="carousel-dot" type="button" role="tab" aria-label="Show testimonial 2" aria-selected="false" data-carousel-dot="1"></button><button class="carousel-dot" type="button" role="tab" aria-label="Show testimonial 3" aria-selected="false" data-carousel-dot="2"></button></div>
+          </div>
         </div>
-        <div class="contact-actions">
-          <a class="contact-link contact-link-primary" href="mailto:hammaddev407@gmail.com">Email me <span aria-hidden="true">↗</span></a>
-          <a class="contact-link" href="tel:+923315048654">Call +92 331 5048654</a>
-          <a class="contact-link" href="https://www.linkedin.com/in/hammad-shakeel-3b217b328/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span></a>
+      </section>
+
+      <section class="contact section section--muted" id="contact" aria-labelledby="contact-title">
+        <div class="container">
+          <div class="contact__layout">
+            <div class="contact__form-wrap"><p class="eyebrow">Start a conversation</p><h2 id="contact-title">Let’s build something <span class="text-primary">great together.</span></h2><p>Tell me a little about what you’re building. I’ll get back to you within 24 hours.</p>
+              <form class="contact-form" data-contact-form novalidate>
+                <div class="form-field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required /><small class="form-field__error" data-error-for="name"></small></div>
+                <div class="form-field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required /><small class="form-field__error" data-error-for="email"></small></div>
+                <div class="form-row"><div class="form-field"><label for="project-type">Project type</label><select id="project-type" name="projectType" required><option value="">Select one</option><option>Product strategy & UX</option><option>Web development</option><option>Launch & improve</option></select><small class="form-field__error" data-error-for="projectType"></small></div><div class="form-field"><label for="budget">Budget range</label><select id="budget" name="budget" required><option value="">Select one</option><option>$1,500 - $3,500</option><option>$3,500 - $7,500</option><option>$7,500+</option></select><small class="form-field__error" data-error-for="budget"></small></div></div>
+                <div class="form-field"><label for="message">How can I help?</label><textarea id="message" name="message" rows="5" required></textarea><small class="form-field__error" data-error-for="message"></small></div>
+                <button class="button button--primary" type="submit">Send Message <i class="fa-solid fa-paper-plane" aria-hidden="true"></i></button>
+              </form>
+            </div>
+            <aside class="contact__details" aria-label="Contact details"><p class="eyebrow">Contact details</p><a href="https://wa.me/923315048654?text=Hi%20Hammad%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>WhatsApp: 0331 5048654</span></a><a href="https://github.com/hammaddev407" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i><span>github.com/hammaddev407</span></a><a href="https://www.linkedin.com/in/hammad-shakeel-3b217b328/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i><span>linkedin.com/in/hammad-shakeel</span></a><p><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>Available for remote work</span></p><div class="contact__socials"><a href="https://wa.me/923315048654?text=Hi%20Hammad%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener" aria-label="WhatsApp" title="Chat on WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a><a href="https://github.com/hammaddev407" target="_blank" rel="noopener" aria-label="GitHub" title="Open GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a><a href="https://www.linkedin.com/in/hammad-shakeel-3b217b328/" target="_blank" rel="noopener" aria-label="LinkedIn" title="Open LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></div></aside>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer>© 2026 Hammad Shakeel · Web, mobile, backend, and automation.</footer>
-  </div>
+    <div class="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden data-project-modal><div class="project-modal__backdrop" data-modal-close></div><div class="project-modal__content"><button class="project-modal__close" type="button" aria-label="Close project details" data-modal-close><i class="fa-solid fa-xmark" aria-hidden="true"></i></button><p class="eyebrow">Case study</p><h2 id="modal-title" data-modal-title>Project details</h2><div class="project-modal__body" data-modal-body></div></div></div>
+    <div class="toast" role="status" aria-live="polite" data-toast></div>
 
-  <script src="script.js"></script>
-</body>
+    <footer class="site-footer"><div class="container site-footer__grid"><div><a class="site-footer__logo" href="#hero">Hammad Shakeel</a><p>Built with <span aria-label="love">♥</span> by Hammad Shakeel</p></div><nav aria-label="Footer navigation"><p class="site-footer__label">Explore</p><a href="#about">About</a><a href="#projects">Projects</a><a href="#contact">Contact</a></nav><div><p class="site-footer__label">Connect</p><div class="site-footer__socials"><a href="https://wa.me/923315048654?text=Hi%20Hammad%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener" aria-label="WhatsApp" title="Chat on WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>WhatsApp</span></a><a href="https://github.com/hammaddev407" target="_blank" rel="noopener" aria-label="GitHub" title="Open GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span></a><a href="https://www.linkedin.com/in/hammad-shakeel-3b217b328/" target="_blank" rel="noopener" aria-label="LinkedIn" title="Open LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i><span>LinkedIn</span></a></div></div></div><div class="site-footer__bottom container"><span>© <span data-current-year></span> Hammad Shakeel. All rights reserved.</span><button class="back-to-top" type="button" aria-label="Back to top" data-back-to-top><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button></div></footer>
+
+    <script src="js/theme.js" defer></script>
+    <script src="js/navigation.js" defer></script>
+    <script src="js/projects.js" defer></script>
+    <script src="js/testimonials.js" defer></script>
+    <script src="js/form.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </body>
 </html>

@@ -1,0 +1,17 @@
+.site-footer { background: var(--color-dark); color: #aaa; padding-top: 3rem; }
+.site-footer__grid { display: grid; gap: 2rem; grid-template-columns: 2fr 1fr 1fr; padding-bottom: 3rem; }
+.site-footer__logo { display: inline-block; margin-bottom: .8rem; }
+.site-footer__grid p { font-size: .85rem; }
+.site-footer__label { margin-bottom: .8rem; color: #fff; font-weight: 700; }
+.site-footer nav { display: grid; gap: .5rem; align-content: start; }
+.site-footer nav a:hover { color: var(--color-accent); }
+.site-footer__socials { display: flex; flex-wrap: wrap; gap: .6rem; }
+.site-footer__socials a { display: inline-flex; width: auto; min-height: 40px; align-items: center; gap: .5rem; border: 1px solid rgb(255 255 255 / 20%); border-radius: 999px; background: rgb(255 255 255 / 8%); padding: .45rem .8rem; color: #fff; font-size: .78rem; font-weight: 700; transition: background .2s ease, border-color .2s ease, transform .2s ease; }
+.site-footer__socials a i { font-size: 1rem; }
+.site-footer__socials a[aria-label="WhatsApp"]:hover { border-color: #25d366; background: #25d366; }
+.site-footer__socials a[aria-label="GitHub"]:hover { border-color: #6e5494; background: #6e5494; }
+.site-footer__socials a[aria-label="LinkedIn"]:hover { border-color: #0a66c2; background: #0a66c2; }
+.site-footer__bottom { display: flex; min-height: 70px; align-items: center; justify-content: space-between; border-top: 1px solid rgb(255 255 255 / 10%); font-size: .75rem; }
+.back-to-top { width: 40px; height: 40px; border: 1px solid rgb(255 255 255 / 25%); border-radius: 50%; background: transparent; color: #fff; }
+.back-to-top:hover { border-color: var(--color-accent); color: var(--color-accent); }
+@media (max-width: 767px) { .site-footer__grid { grid-template-columns: 1fr 1fr; } .site-footer__grid > :first-child { grid-column: 1 / -1; } }
