@@ -1,4 +1,4 @@
-const CACHE_NAME = "portfolio-v1";
+const CACHE_NAME = "portfolio-v2";
 const APP_SHELL = ["./", "./index.html", "./css/style.css", "./js/main.js"];
 
 self.addEventListener("install", (event) => {
