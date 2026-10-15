@@ -1,4 +1,4 @@
-.site-header { position: fixed; z-index: 50; top: 0; width: 100%; color: #fff; transition: background .25s ease, box-shadow .25s ease; }
+.site-header { position: absolute; z-index: 50; top: 0; width: 100%; color: #fff; transition: background .25s ease, box-shadow .25s ease; }
 .site-header.is-scrolled { background: rgb(10 10 10 / 94%); box-shadow: 0 4px 20px rgb(0 0 0 / 18%); backdrop-filter: blur(14px); }
 .site-nav { display: flex; min-height: 78px; align-items: center; justify-content: space-between; }
 .site-nav__logo, .site-footer__logo { color: #fff; font-size: 1.25rem; font-weight: 600; }

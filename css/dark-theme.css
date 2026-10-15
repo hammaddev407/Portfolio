@@ -1,12 +1,12 @@
 html[data-theme="dark"] {
   color-scheme: dark;
-  --color-bg: #101010;
-  --color-surface: #171717;
-  --color-text: #f5f5f5;
-  --color-muted: #a7a7a7;
-  --color-border: #2c2c2c;
-  --shadow-sm: 0 8px 24px rgb(0 0 0 / 25%);
+  --color-bg: #0b1e33;
+  --color-surface: #102a43;
+  --color-text: #f5f9ff;
+  --color-muted: #b8c7d9;
+  --color-border: #294563;
+  --shadow-sm: 0 8px 24px rgb(4 15 30 / 35%);
 }
-html[data-theme="dark"] .site-header:not(.is-scrolled) { background: rgb(10 10 10 / 45%); }
-html[data-theme="dark"] .skill-card, html[data-theme="dark"] .project-card, html[data-theme="dark"] .project-modal__content { background: #171717; }
-html[data-theme="dark"] .form-field input, html[data-theme="dark"] .form-field select, html[data-theme="dark"] .form-field textarea { background: #101010; }
+html[data-theme="dark"] .site-header:not(.is-scrolled) { background: rgb(7 20 38 / 45%); }
+html[data-theme="dark"] .skill-card, html[data-theme="dark"] .project-card, html[data-theme="dark"] .project-modal__content { background: #102a43; }
+html[data-theme="dark"] .form-field input, html[data-theme="dark"] .form-field select, html[data-theme="dark"] .form-field textarea { background: #0b1e33; }
