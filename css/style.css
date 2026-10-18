@@ -43,10 +43,10 @@ html  { font-family: var(--font-sans); scroll-behavior: smooth;
         -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 body  {
   background:
-    radial-gradient(circle at 8% 0%, rgba(37, 99, 235, .16), transparent 30rem),
-    radial-gradient(circle at 96% 18%, rgba(13, 148, 136, .13), transparent 28rem),
-    radial-gradient(circle at 50% 78%, rgba(99, 102, 241, .08), transparent 34rem),
-    linear-gradient(180deg, #fbfdff 0%, #f4f7fb 44%, #eaf0f7 100%);
+    radial-gradient(circle at 8% 0%, rgba(96, 165, 250, .2), transparent 30rem),
+    radial-gradient(circle at 96% 18%, rgba(45, 212, 191, .14), transparent 28rem),
+    radial-gradient(circle at 50% 78%, rgba(129, 140, 248, .12), transparent 34rem),
+    linear-gradient(180deg, #f8fbff 0%, #e9eef7 46%, #172033 100%);
   color: var(--color-text);
   line-height: 1.6;
   overflow-x: hidden;
@@ -451,6 +451,31 @@ a.proof-bar__item:hover .proof-bar__metric { color: var(--color-accent); }
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
+}
+.hero__portrait { justify-self: center; text-align: center; }
+.hero__portrait-frame {
+  width: clamp(190px, 25vw, 270px);
+  aspect-ratio: 1;
+  padding: 7px;
+  border: 1px solid rgba(96, 165, 250, .8);
+  border-radius: 50%;
+  background: linear-gradient(145deg, #2563eb, #14b8a6 55%, #818cf8);
+  box-shadow: 0 24px 70px rgba(15, 23, 42, .32), 0 0 0 10px rgba(255,255,255,.22);
+}
+.hero__portrait-frame img {
+  width: 100%;
+  height: 100%;
+  border: 5px solid #0f172a;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+}
+.hero__portrait-caption {
+  margin-top: 1rem;
+  color: var(--color-text-2);
+  font-family: var(--font-mono);
+  font-size: .7rem;
+  letter-spacing: .04em;
 }
 @media (min-width: 860px) {
   .bento-grid {
