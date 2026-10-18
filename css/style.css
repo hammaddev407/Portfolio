@@ -41,8 +41,15 @@
 *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
 html  { font-family: var(--font-sans); scroll-behavior: smooth;
         -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-body  { background: var(--color-bg); color: var(--color-text);
-        line-height: 1.6; overflow-x: hidden; }
+body  {
+  background:
+    radial-gradient(circle at 8% 4%, rgba(37, 99, 235, .10), transparent 28rem),
+    radial-gradient(circle at 92% 24%, rgba(14, 165, 233, .08), transparent 30rem),
+    linear-gradient(180deg, #f8fbff 0%, #f4f7fb 48%, #eef3f8 100%);
+  color: var(--color-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
 body.is-menu-open { overflow: hidden; }
 img   { display: block; max-width: 100%; height: auto; }
 a     { color: inherit; text-decoration: none; }
@@ -434,7 +441,8 @@ a.proof-bar__item:hover .proof-bar__metric { color: var(--color-accent); }
 
 /* ── 9. PROJECTS (BENTO GRID) ────────────────────────────────────────────── */
 .projects-section {
-  background: #fff;
+  background: rgba(255, 255, 255, .72);
+  backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -457,6 +465,7 @@ a.proof-bar__item:hover .proof-bar__metric { color: var(--color-accent); }
   border-radius: var(--r-md);
   overflow: hidden;
   transition: var(--ease);
+  box-shadow: 0 14px 32px -24px rgba(15, 23, 42, .45);
 }
 .bento-card:hover {
   transform: translateY(-6px);
@@ -467,13 +476,22 @@ a.proof-bar__item:hover .proof-bar__metric { color: var(--color-accent); }
 .bento-card__media {
   position: relative; width: 100%;
   aspect-ratio: 16/9;
-  background: #0f172a; overflow: hidden;
+  background:
+    radial-gradient(circle at 80% 18%, rgba(96, 165, 250, .55), transparent 28%),
+    linear-gradient(135deg, #0f172a 0%, #1e3a8a 52%, #0f766e 100%);
+  overflow: hidden;
   border-bottom: 1px solid var(--color-border);
 }
 .bento-card__img {
   width: 100%; height: 100%;
-  object-fit: cover; transition: transform .5s ease;
+  object-fit: cover; background: #dbeafe;
+  transition: transform .5s ease;
 }
+.bento-card__img[src*="food-delivery"] { background: linear-gradient(135deg, #431407, #ea580c); }
+.bento-card__img[src*="pixel-tracking"] { background: linear-gradient(135deg, #172554, #2563eb); }
+.bento-card__img[src*="gym-website"] { background: linear-gradient(135deg, #111827, #475569); }
+.bento-card__img[src*="cosmatic-website"] { background: linear-gradient(135deg, #4c1d95, #db2777); }
+.bento-card__img[src*="hammaddev"] { background: linear-gradient(135deg, #0f172a, #0e7490); }
 .bento-card:hover .bento-card__img { transform: scale(1.04); }
 
 .bento-card__badge {
